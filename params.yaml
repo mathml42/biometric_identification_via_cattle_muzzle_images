@@ -1,0 +1,6 @@
+prepare:
+  raw_data_dir: data/raw
+  prepared_data_dir: data/prepared
+  test_size: 0.10
+  min_images: 3
+  random_state: 42

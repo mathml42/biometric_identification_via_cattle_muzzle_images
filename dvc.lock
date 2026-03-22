@@ -1,0 +1,27 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 6372db5e5b8bfca4730cc6be1c4aaa6f.dir
+      size: 290544117
+      nfiles: 1224
+    - path: src/prepare.py
+      hash: md5
+      md5: 13789f140b1c6d60bb9200d3ef231fe7
+      size: 2725
+    params:
+      params.yaml:
+        prepare.min_images: 3
+        prepare.prepared_data_dir: data/prepared
+        prepare.random_state: 42
+        prepare.raw_data_dir: data/raw
+        prepare.test_size: 0.1
+    outs:
+    - path: data/prepared
+      hash: md5
+      md5: 5107b42eba71d41be90d9d181f342dc7.dir
+      size: 144702742
+      nfiles: 1084

@@ -1,0 +1,14 @@
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - data/raw
+    - src/prepare.py
+    params:
+    - prepare.min_images
+    - prepare.prepared_data_dir
+    - prepare.random_state
+    - prepare.raw_data_dir
+    - prepare.test_size
+    outs:
+    - data/prepared
